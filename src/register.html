@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <title>Fleura | Register</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main class="w-full">
+    <div class="  min-h-screen w-full bg-[url('images/Login_register_photo.jpg')]  bg-cover bg-center flex justify-center items-center ">
+        <form class="  h-[520px] w-[400px] md:h-[450px] md:w-[800px] bg-mauve-100 rounded-xl py-[20px] px-[60px] flex flex-col shadow-2xl">
+           <div class=" flex justify-center items-center ">
+            <img src="images/logo_register_login.png" class="bg-cover w-[60px] h-[70px]">
+            <h2 class="font-bold ml-2 mt-4 text-xl font-serif">Welcome in Fleura </h2>
+            </div>
+                <div class="flex flex-col">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+
+                        <div>
+                            <label for="first_name" class="block mb-2 text-[15px]">
+                                First Name
+                            </label>
+                            <input
+                                type="text"
+                                id="first_name"
+                                class="w-full border h-[30px] rounded-lg p-2"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="last_name" class="block mb-2 text-[15px]">
+                                Last Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="last_name"
+                                class="w-full border h-[30px] rounded-lg p-2"
+                            />
+                        </div>
+
+                </div>
+
+                <div class="mt-4">
+                        <label for="email" class="block mb-2 text-[15px] " >Email</label>
+                        <input type="email" id="email" class="w-full border h-[30px] rounded-lg p-2" />
+                </div>
+
+                 <div class="mt-4">
+                        <label for="password" class="block mb-2 text-[15px] " >Password</label>
+                        <input type="password" id="password" class="w-full border h-[30px] rounded-lg p-2" />
+                </div>
+            </div>
+            
+            <input type="submit" value="Register" class="cursor-pointer py-2 md:w-[85px] md:h-[40px] bg-[#815058] rounded-lg mt-6 text-mauve-100">
+
+            <h2 class=" mt-2">Have an account? <a href="login.html" class="text-[#6E3B43]">Login</a></h2>
+           
+        </form>
+    </div>
+    </main>
+
+
+    <script src="js/register.js"></script>
+</body>
+</html>
