@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="output.css">
+    
+    <title>Fleura | Home</title>
+</head>
+<body>
+    
+    <header class="w-full">
+        <div class="w-full h-[65px] shadow flex justify-between items-center px-12 py-3 bg-mauve-100">
+            <div><img src="images/logo.png" class="w-[160px] h-[120px] object-cover mb-2"></div>
+            <div class="flex justify-center hidden items-center h-full gap-2 font-serif" id="register_info">
+                <button><a href="login.html">Login</a></button>
+                <div class="w-[2px] h-[30px] bg-[#BD868C]"></div>
+                <button><a href="register.html">Register</a></button>
+            </div>
+            <div class="flex gap-6 font-serif " id="user_info">
+                <div class="mt-[6px] flex gap-6 ">
+                    <h2 id="name_acc">hello</h2>
+                    <div id="cart" class="">
+                        <a href="cart.html"><i class="fas fa-shopping-basket text-[#AC7A7F] text-xl"></i></a>
+                        <span class=" w-[8px] h-[8px] rounded-full  inline-flex items-center justify-center ">1</span>
+                    </div> 
+                </div>
+                <button class="border-1 border-[#BD868C] px-2 py-1 shadow cursor-pointer hover:shadow-[#CDA4A9] ">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="h-full w-full">
+        <div class=" h-full w-full">
+            <div class="  flex items-center justify-center gap-6 py-6 px-4" id="search_section">
+                <div class="relative w-52  ">
+                    <select class="appearance-none w-full border border-[#E6D6D8] text-gray-600  shadow-sm rounded-xl px-3 py-2 pr-10 focus:border-[#BD868C] focus:ring-4 focus:ring-[#CDA4A9]/30 focus:outline-none">
+                        <option value="All" >All Categories</option>
+                        <option value="Bouquets" >Bouquets</option>
+                        <option value="Roses">Roses</option>
+                        <option value="Tulips">Tulips</option>
+                        <option value="Lilies">Lilies</option>
+                        <option value="Sunflowers">Sunflowers</option>
+                        <option value="Orchids">Orchids</option>
+                        
+                    </select>
+                    <span class="absolute top-3 right-3 text-gray-600 text-sm"> <i class="fa-solid fa-chevron-down"></i></span>
+                </div>
+                <div class="relative">
+                    <input type="text" placeholder="Search flowers..." class="bg-white border w-[600px] border-[#E6D6D8] focus:border-[#BD868C] focus:ring-4 focus:ring-[#CDA4A9]/30 focus:outline-none  shadow-sm rounded-xl px-3 py-2 " />
+                    <img src="images/search_logo.png" class="inline-block absolute w-[30px] h-[30px] object-cover top-1/2 opacity-70 -translate-y-1/2 right-2">
+                </div>
+                <button
+                    id="search_btn"
+                    class="bg-[#AC7A7F]
+                    hover:bg-[#9C6F73]
+                    text-white
+                    font-medium
+                    px-8
+                    py-2
+                    rounded-xl
+                    shadow-md
+                    hover:shadow-2xl
+                    transition-all
+                    duration-300">
+                        Search
+                    </button>
+           </div>
+        </div>
+    </main>
+    <section id="flowers_container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-10 py-10">
+        
+    </section>
+
+
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+[
+   {
+    "id": 1,
+    "name": "Pink Lily",
+    "category": "Lilies",
+    "price": 230,
+    "image": "../images/pink_lily.webp",
+    "description": "Fresh pink lilies.",
+    "stock": 7,
+    "rating": 4.8
+  }, 
+  {
+    "id": 2,
+    "name": "Pink Rose Bouquet",
+    "category": "Bouquets",
+    "price": 230,
+    "image": "../images/pink_rose_bouquet.webp",
+    "description": "Soft pink roses for special moments.",
+    "stock": 10,
+    "rating": 4.8
+  },
+  {
+    "id": 3,
+    "name": "White Rose Bouquet",
+    "category": "Bouquets",
+    "price": 240,
+    "image": "../images/white_rose_bouquet.webp",
+    "description": "Elegant white roses wrapped beautifully.",
+    "stock": 8,
+    "rating": 4.7
+  },
+  {
+    "id": 4,
+    "name": "Mixed Roses Bouquet",
+    "category": "Bouquets",
+    "price": 270,
+    "image": "../images/mixed_roses.webp",
+    "description": "A colorful mix of fresh roses.",
+    "stock": 15,
+    "rating": 4.9
+  },
+  {
+    "id": 5,
+    "name": "Luxury Rose Bouquet",
+    "category": "Bouquets",
+    "price": 350,
+    "image": "../images/luxury_rose.webp",
+    "description": "Premium luxury bouquet for celebrations.",
+    "stock": 6,
+    "rating": 5.0
+  },
+
+  {
+    "id": 6,
+    "name": "Yellow Tulip",
+    "category": "Tulips",
+    "price": 180,
+    "image": "../images/yellow_tulip.webp",
+    "description": "Bright yellow tulips full of happiness.",
+    "stock": 18,
+    "rating": 4.6
+  },
+  {
+    "id": 7,
+    "name": "Pink Tulip",
+    "category": "Tulips",
+    "price": 190,
+    "image": "../images/pink_tulip.webp",
+    "description": "Beautiful pink tulips for loved ones.",
+    "stock": 14,
+    "rating": 4.7
+  },
+  {
+    "id": 8,
+    "name": "Purple Tulip",
+    "category": "Tulips",
+    "price": 200,
+    "image": "../images/purple_tulip.webp",
+    "description": "Elegant purple tulips.",
+    "stock": 11,
+    "rating": 4.8
+  },
+  {
+    "id": 9,
+    "name": "White Tulip",
+    "category": "Tulips",
+    "price": 185,
+    "image": "../images/white_tulip.webp",
+    "description": "Fresh white tulips with elegant style.",
+    "stock": 9,
+    "rating": 4.6
+  },
+  {
+    "id": 10,
+    "name": "Red Tulip",
+    "category": "Tulips",
+    "price": 210,
+    "image": "../images/red_tulip.webp",
+    "description": "Classic red tulips.",
+    "stock": 12,
+    "rating": 4.8
+  },
+
+  {
+    "id": 11,
+    "name": "White Lily",
+    "category": "Lilies",
+    "price": 220,
+    "image": "../images/white_lily.webp",
+    "description": "Elegant white lilies.",
+    "stock": 8,
+    "rating": 4.9
+  },
+  {
+    "id": 1,
+    "name": "Red Rose Bouquet",
+    "category": "Bouquets",
+    "price": 250,
+    "image": "../images/red_rose_bouquet.webp",
+    "description": "A romantic bouquet of fresh red roses.",
+    "stock": 12,
+    "rating": 4.9
+  },
+  {
+    "id": 13,
+    "name": "Orange Lily",
+    "category": "Lilies",
+    "price": 225,
+    "image": "../images/orange_lily.webp",
+    "description": "Vibrant orange lilies.",
+    "stock": 10,
+    "rating": 4.7
+  },
+  {
+    "id": 14,
+    "name": "Tiger Lily",
+    "category": "Lilies",
+    "price": 240,
+    "image": "../images/tiger_lily.webp",
+    "description": "Unique tiger lilies.",
+    "stock": 6,
+    "rating": 4.9
+  },
+  {
+    "id": 15,
+    "name": "Mixed Lily Bouquet",
+    "category": "Lilies",
+    "price": 280,
+    "image": "../images/mixed_lily.webp",
+    "description": "A bouquet of mixed lilies.",
+    "stock": 9,
+    "rating": 5.0
+  },
+
+  {
+    "id": 16,
+    "name": "White Orchid",
+    "category": "Orchids",
+    "price": 320,
+    "image": "../images/white_orchid.webp",
+    "description": "Luxury white orchid.",
+    "stock": 5,
+    "rating": 5.0
+  },
+  {
+    "id": 17,
+    "name": "Purple Orchid",
+    "category": "Orchids",
+    "price": 330,
+    "image": "../images/purple_orchid.webp",
+    "description": "Beautiful purple orchid.",
+    "stock": 6,
+    "rating": 4.9
+  },
+  {
+    "id": 18,
+    "name": "Pink Orchid",
+    "category": "Orchids",
+    "price": 310,
+    "image": "../images/pink_orchid.webp",
+    "description": "Elegant pink orchid.",
+    "stock": 7,
+    "rating": 4.8
+  },
+  {
+    "id": 19,
+    "name": "Yellow Orchid",
+    "category": "Orchids",
+    "price": 315,
+    "image": "../images/yellow_orchid.webp",
+    "description": "Rare yellow orchid.",
+    "stock": 4,
+    "rating": 4.9
+  },
+  {
+    "id": 20,
+    "name": "Blue Orchid",
+    "category": "Orchids",
+    "price": 340,
+    "image": "../images/blue_orchid.webp",
+    "description": "Exotic blue orchid.",
+    "stock": 3,
+    "rating": 5.0
+  },
+
+  {
+    "id": 21,
+    "name": "Sunflower Bouquet",
+    "category": "Sunflowers",
+    "price": 210,
+    "image": "../images/sunflower.webp",
+    "description": "Bright sunflower bouquet.",
+    "stock": 15,
+    "rating": 4.8
+  },
+  {
+    "id": 22,
+    "name": "Mini Sunflower",
+    "category": "Sunflowers",
+    "price": 170,
+    "image": "../images/mini_sunflower.webp",
+    "description": "Cute mini sunflowers.",
+    "stock": 18,
+    "rating": 4.6
+  },
+  {
+    "id": 23,
+    "name": "Golden Sunflower",
+    "category": "Sunflowers",
+    "price": 220,
+    "image": "../images/golden_sunflower.webp",
+    "description": "Golden sunflower bouquet.",
+    "stock": 10,
+    "rating": 4.9
+  },
+  {
+    "id": 24,
+    "name": "Summer Sunflower",
+    "category": "Sunflowers",
+    "price": 200,
+    "image": "../images/summer_sunflower (3).webp",
+    "description": "Fresh summer sunflower bouquet.",
+    "stock": 11,
+    "rating": 4.7
+  },
+  {
+    "id": 25,
+    "name": "Luxury Sunflower ",
+    "category": "Sunflowers",
+    "price": 360,
+    "image": "../images/luxury_sunflower.webp",
+    "description": "Premium sunflower basket.",
+    "stock": 5,
+    "rating": 5.0
+  }
+]
