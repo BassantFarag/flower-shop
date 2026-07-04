@@ -40,7 +40,7 @@ fetch("data/flowers.json")
                 </div>
             </div>
         </div>`
-
+        
         flowers_container_section.appendChild(card)
     })
 })
