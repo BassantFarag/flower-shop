@@ -1,23 +1,4 @@
 
-
-//favotite
-const flowers_container_section=document.getElementById("flowers_container");
-flowers_container_section.addEventListener("click" , (e)=>{
-    if(e.target.classList.contains("fa-heart")){
-        e.target.classList.toggle("fa-solid");
-        e.target.classList.toggle("text-red-700");
-    }
-})
-
-// function isInCart(id) {
-//     return selected_items.some(item => item.id === id);
-// }
-
-
-
-
-
-
 //fetch data
 // Show Data
 let flowers =[]
@@ -37,7 +18,11 @@ async function init(){
                 </h2>
                 
                 <button class="favorite-btn absolute top-6 right-5 cur ">
-                    <i class="fa-regular fa-heart  text-xl" ></i>
+                    <i
+                    id="heart-${item.id}"
+                     class="fa-regular fa-heart  text-xl" 
+                     onclick="toggleFavorite(${item.id})"
+                     ></i>
                 </button>
                    
                 
@@ -52,7 +37,7 @@ async function init(){
                     <button
                         id="btn-${item.id}"
                         class="addToCart bg-[#BD868C] hover:bg-[#A86D73] text-white px-4 py-2 rounded-xl transition" 
-                        onClick="addToCart(${item.id})">
+                        onClick="toggleCart(${item.id})">
                         Add to Cart
                     </button>
                 </div>
@@ -61,6 +46,8 @@ async function init(){
         
         flowers_container_section.appendChild(card)
     })
+    updateButton();
+    updateFavoriteIcon();
 }
 init();
 
@@ -80,6 +67,40 @@ function updateBadge(){
 
     budge.innerHTML=totalNumberOfItem;
 }
+
+function updateButton(){
+    flowers.forEach((flower) => {
+        const btn = document.getElementById(`btn-${flower.id}`);
+        if (!btn) return;
+
+        const existInCart=selected_items.find((item) => item.id === flower.id);
+        if(existInCart){
+            btn.textContent = "Remove from Cart";
+            btn.classList.remove(
+                "bg-[#BD868C]",
+                "hover:bg-[#A86D73]"
+            );
+            btn.classList.add(
+                "bg-red-800",
+                "hover:bg-red-900"
+            );
+        }
+        else{
+            btn.textContent = "Add to Cart";
+            btn.classList.remove(
+                "bg-red-800",
+                "hover:bg-red-900"
+            );
+            btn.classList.add(
+                "bg-[#BD868C]",
+                "hover:bg-[#A86D73]"
+            );
+
+        }
+    });
+}
+
+
 updateBadge();
 //add to cart
 const cart_icon=document.getElementById("cart");
@@ -106,6 +127,25 @@ function addToCart(id){
    
     }else{
         window.location.href="login.html"
+    }
+}
+function toggleCart(id){
+    let existItem = selected_items.find(item => item.id === id);
+    if(existItem){
+        selected_items=selected_items.filter(item => item.id !==id);
+        localStorage.setItem(
+            "flowersInCart",
+            JSON.stringify(selected_items)
+        );
+        updateBadge();
+        DrawCartProduct();
+        updateButton()
+    }else{
+        addToCart(id);
+        updateButton()
+        updateBadge();
+        DrawCartProduct();
+        
     }
 }
 
@@ -164,7 +204,8 @@ function calcPrice(){
                                                 <span class="count size-4 text-xl pt-2 text-white flex justify-center items-center">${item.quantity}</span>
                                                 <span class="subtruct size-7 bg-white text-[#BD868C] flex justify-center items-center rounded-lg cursor-pointer" onClick="subtructItem(${item.id})">-</span>
                                         </div>
-                                        <div><i class="fa-regular fa-trash-can text-[#BD868C] size-7 ml-8 cursor-pointer" onClick="deleteAll_from_mini_cart(${item.id})"></i></div>
+                                        <div><i
+                                         class="fa-regular fa-trash-can text-[#BD868C] size-7 ml-8 cursor-pointer" onClick="deleteAll_from_mini_cart(${item.id})"></i></div>
                                     </div>
                                     <div class="flex gap-2 ">
                                         <div class="flex flex-col justify-center items-end font-sans ">
@@ -194,6 +235,7 @@ function calcPrice(){
     DrawCartProduct();
 
     updateBadge()
+    updateButton()
  }  
 function addItem(id){
     let addone=selected_items.find((item) => item.id===id);
@@ -225,3 +267,47 @@ function subtructItem(id){
 
    
 }
+
+
+//favorite
+
+const flowers_container_section=document.getElementById("flowers_container");
+
+
+
+let favoriteList =JSON.parse(localStorage.getItem("favoriteItems")) || [];
+function toggleFavorite(id){
+    const existInFav=favoriteList.find(item => item.id === id);
+    if(existInFav){
+        //remove from fav 
+        favoriteList=favoriteList.filter(item => item.id !== id);
+        localStorage.setItem("favoriteItems" , JSON.stringify(favoriteList));
+    }else{
+        let flowerFav=flowers.find((item) => item.id ===id);
+        favoriteList.push(flowerFav);
+        localStorage.setItem("favoriteItems" , JSON.stringify(favoriteList));
+    }
+
+    updateFavoriteIcon();
+}
+
+function updateFavoriteIcon(){
+    flowers.forEach((flower) => {
+        const heart = document.getElementById(`heart-${flower.id}`);
+        if (!heart) return;
+
+        const exist = favoriteList.find(item => item.id === flower.id);
+
+        if (exist) {
+
+            heart.classList.remove("fa-regular");
+            heart.classList.add("fa-solid", "text-red-700");
+
+        } else {
+
+            heart.classList.remove("fa-solid", "text-red-700");
+            heart.classList.add("fa-regular");
+        }
+
+    });
+    }
