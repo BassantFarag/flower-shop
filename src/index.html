@@ -12,28 +12,56 @@
 </head>
 <body>
     
-    <header class="w-full">
+    <header class="fixed top-0 left-0 w-full z-50">
         <div class="w-full h-[65px] shadow flex justify-between items-center px-2 md:px-12 md:py-3 bg-mauve-100">
             <div><img src="images/logo.png" class=" w-28 md:w-40 h-[100px] md:w-[160px] md:h-[120px] object-cover mb-2"></div>
-            <div class="flex justify-center hidden items-center h-full gap-2 font-serif" id="register_info">
-                <button><a href="login.html">Login</a></button>
-                <div class="w-[2px] h-[30px] bg-[#BD868C]"></div>
-                <button><a href="register.html">Register</a></button>
+            <div class="flex justify-center  items-center h-full gap-4 font-serif" id="register_info">
+                <button class="hover:text-shadow-sm hover:text-shadow-[#BD868C]/20"><a href="login.html">Login</a></button>
+                <div class="w-[2px] h-[20px] bg-[#BD868C]"></div>
+                <button class="hover:text-shadow-sm hover:text-shadow-[#BD868C]/20"><a href="register.html">Register</a></button>
             </div>
-            <div class="flex gap-6 font-serif " id="user_info">
-                <div class="mt-[6px] flex gap-3 items-center :gap-6 ">
-                    <h2 id="name_acc" class="hidden md:block">hello</h2>
-                    <div id="cart" class="">
-                        <a href="cart.html"><i class="fas fa-shopping-basket text-[#AC7A7F] text-xl"></i></a>
-                        <span class=" w-[8px] h-[8px] rounded-full  inline-flex items-center justify-center ">1</span>
-                    </div> 
+            <div class="flex gap-6 hidden font-serif " id="user_info">
+                <div class="mt-[6px] flex gap-3 items-center md:gap-6 ">
+                    <h2 id="name_acc" class="hidden md:block"></h2>
+                    <div class="relative">
+                        <div id="cart_section" class="">
+                            <i class="fas fa-shopping-basket text-[#AC7A7F] text-xl cursor-pointer" id="cart" onClick="DrawCartItems()"></i>
+                            <span class=" w-[8px] h-[8px] rounded-full  inline-flex items-center justify-center " id="budge"></span>
+                        </div> 
+                        <!-- cart -->
+                        <div id="mini_Cart" class=" flex flex-col absolute w-[400px] bg-[#2b2b2b] px-4 py-3 rounded-2xl shadow-2xl border border-[#E8D6D8]  z-50  top-12 right-0 opacity-0 invisible scale-95  transition-all duration-300">
+                            <!-- header -->
+                            <div class="flex items-center justify-end gap-2 border-b-1 border-[#E6D6D8]/70 pb-3">
+                                <h2 class="text-[#6E3B43] font-semibold font-sans text-2xl ">My Cart</h2>
+                                <img src="images/cartLogo.png" class="w-9 h-9 mt-1 object-cover">
+                            </div>
+                            <!-- products -->
+                             <div id="cart_items" class="flex  flex-col h-[220px] overflow-y-auto "></div>
+                               
+                            <!-- footer -->
+                             <div class="flex flex-col gap-2 font-sans font-semibold">
+                                <div class="total_price border-b-1 border-[#E6D6D8]/60 pb-3 flex justify-between text-mauve-100 pt-2">
+                                    <h2 id="totalPrice"></h2>
+                                    <h2>ToTAL</h2>
+                                </div>
+                                <button class="w-full py-3 px-1 bg-[#BD868C] rounded-xl text-white cursor-pointer" id="ViewCart">View Cart</button>
+                                <button class="w-full py-3 px-1 bg-mauve-100 rounded-xl text-[#6E3B43] cursor-pointer " onClick="closeCart()">Continue Shopping</button>
+                             </div>
+                        </div>
+                    </div>    
                 </div>
-                <button class="border-1 border-[#BD868C] px-2 py-1 shadow cursor-pointer hover:shadow-[#CDA4A9] ">Logout</button>
+                <button class="border-1 border-[#BD868C] px-2 py-1 shadow cursor-pointer hover:shadow-[#CDA4A9] " id="Logout">Logout</button>
             </div>
         </div>
     </header>
 
-    <main class="h-full w-full">
+    <div id="overlay"
+class="fixed top-[65px] left-0 w-full hidden h-[calc(100vh-65px)]
+      bg-black/20 backdrop-blur-sm  z-40">
+ </div>
+
+    <main class="h-full w-full w-full pt-[80px]">
+        
         <div class=" h-full w-full">
             <div class=" flex flex-col md:flex-row  items-center justify-center gap-6 py-6 px-4" id="search_section">
                 <div class="relative w-52  ">
@@ -77,7 +105,8 @@
 
 
 
-
+    <script></script>
     <script src="js/index.js"></script>
+    <script src="js/global.js"></script>
 </body>
 </html>

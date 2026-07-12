@@ -19,6 +19,7 @@ LoginForm.addEventListener('submit',(e) =>{
     }else if(foundUser.passward!==passwardValue){
         showNotification("incorrect password ! try again ","error");
     }else{
+        localStorage.setItem("currentUser",JSON.stringify(foundUser))
          showNotification("Registration successful! Redirecting...", "success");
         setTimeout(()=>{
             alert("🌸 Welcome back to Fleura!");

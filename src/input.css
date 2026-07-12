@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+#cart_items {
+    scroll-behavior: smooth;
+}
+
+#cart_items::-webkit-scrollbar {
+    width: 6px;
+    
+}
+
+#cart_items::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#cart_items::-webkit-scrollbar-thumb {
+    background: #BD868C;
+    border-radius: 999px;
+    transition: 0.3s;
+    
+}
+
+#cart_items::-webkit-scrollbar-thumb:hover {
+    background: #A86D73;
+}
