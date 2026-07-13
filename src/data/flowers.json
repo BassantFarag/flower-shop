@@ -104,7 +104,7 @@
   {
     "id": 11,
     "name": "White Lily",
-    "category": "Lilies",
+    "category": "category",
     "price": 220,
     "image": "../images/white_lily.webp",
     "description": "Elegant white lilies.",
